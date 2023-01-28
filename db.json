@@ -1,0 +1,80 @@
+{
+  "projects": [
+    {
+      "name": "Projeto 007",
+      "budget": "4000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 7
+    },
+    {
+      "name": "AAAAAAAA",
+      "budget": "1",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 8
+    },
+    {
+      "name": "BBBBBBBBBB",
+      "budget": "100",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 7,
+      "services": [
+        {
+          "name": "AAAAAAAA",
+          "cost": "1",
+          "description": "AAAAAAA",
+          "id": "01d36a63-5f07-4220-9f36-a84a7a37a9e7"
+        },
+        {
+          "name": "CCCCC",
+          "cost": "1",
+          "description": "BBBBBBBB",
+          "id": "71f0839b-142c-4ae9-9f25-f260a92737d9"
+        },
+        {
+          "name": "BBBBB",
+          "cost": "1",
+          "description": "BBBB",
+          "id": "e1c1e75d-9477-4a88-b04e-8c59038998e6"
+        },
+        {
+          "name": "DDDD",
+          "cost": "4",
+          "description": "DDDD",
+          "id": "60fdbae5-e2f7-44bb-9b5d-5ea520be5d52"
+        }
+      ],
+      "id": 9
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
+}

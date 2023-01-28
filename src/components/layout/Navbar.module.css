@@ -1,0 +1,27 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    background-image:linear-gradient(to left,rgb(0, 0, 0),rgb(0, 0, 0),rgb(238, 206, 22));
+    padding: 1em;
+    border-radius: 0px;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.item {
+    margin-right: 2em;
+}
+
+.item a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+.item a:hover {
+    color: #FFBB33;
+}
