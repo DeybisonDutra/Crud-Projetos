@@ -1,9 +1,20 @@
 .project_container {
+  width: 100%;
+  padding: 3em;
+  
+}
+.project_container_Mobile {
+  width: 100%;
   padding: 2em;
 }
-
 .title_container {
   display: flex;
   justify-content: space-between; 
   margin-bottom: 2em; 
+}
+.title_container_Mobile {
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 2em; 
+  
 }

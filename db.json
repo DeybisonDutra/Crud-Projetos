@@ -1,7 +1,65 @@
 {
   "projects": [
     {
-      "name": "Projeto 007",
+      "name": "projeto 01",
+      "budget": "1000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 500,
+      "services": [
+        {
+          "name": "Armador",
+          "cost": "100",
+          "description": "ferragem",
+          "id": "17bec747-fcff-4959-bdab-02a0feeffec9"
+        },
+        {
+          "name": "ajudante",
+          "cost": "50",
+          "description": "serviços gerais",
+          "id": "f432b2da-0733-400c-b839-c8be61a9896d"
+        },
+        {
+          "name": "Carpinteiro",
+          "cost": "150",
+          "description": "Fazer painel de madeira",
+          "id": "3dabfb57-d080-4d79-b74e-8f8bf68d50c6"
+        },
+        {
+          "name": "Soldador",
+          "cost": "200",
+          "description": "Fazer gabarito",
+          "id": "b003489c-bb2f-46e8-ad3a-97850d8f6032"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "projeto 02",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "projeto 03",
+      "budget": "3000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "projeto 04",
       "budget": "4000",
       "category": {
         "id": "4",
@@ -9,54 +67,29 @@
       },
       "cost": 0,
       "services": [],
-      "id": 7
+      "id": 4
     },
     {
-      "name": "AAAAAAAA",
-      "budget": "1",
+      "name": "Projeto 05",
+      "budget": "5000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
-      "id": 8
+      "id": 5
     },
     {
-      "name": "BBBBBBBBBB",
-      "budget": "100",
+      "name": "projeto 06",
+      "budget": "7000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "1",
+        "name": "Infra"
       },
-      "cost": 7,
-      "services": [
-        {
-          "name": "AAAAAAAA",
-          "cost": "1",
-          "description": "AAAAAAA",
-          "id": "01d36a63-5f07-4220-9f36-a84a7a37a9e7"
-        },
-        {
-          "name": "CCCCC",
-          "cost": "1",
-          "description": "BBBBBBBB",
-          "id": "71f0839b-142c-4ae9-9f25-f260a92737d9"
-        },
-        {
-          "name": "BBBBB",
-          "cost": "1",
-          "description": "BBBB",
-          "id": "e1c1e75d-9477-4a88-b04e-8c59038998e6"
-        },
-        {
-          "name": "DDDD",
-          "cost": "4",
-          "description": "DDDD",
-          "id": "60fdbae5-e2f7-44bb-9b5d-5ea520be5d52"
-        }
-      ],
-      "id": 9
+      "cost": 0,
+      "services": [],
+      "id": 6
     }
   ],
   "categories": [

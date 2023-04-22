@@ -1,7 +1,7 @@
 .btn {
     background-image:linear-gradient(to left,rgb(0, 0, 0),rgb(0, 0, 0),rgb(255, 217, 0));
     color: #fff;
-    padding: 0.7em 1.2em;
+    padding: 0.5em 1.2em;
     text-decoration: none;
     transition: .5s;
     cursor: pointer;

@@ -1,9 +1,13 @@
 .container {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     margin:0 auto;
     flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 20px;
+    
+    
+   
 }
 
 .min-height {

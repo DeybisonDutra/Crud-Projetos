@@ -8,13 +8,14 @@ import Loading from "../layout/Loading"
 import styles from './Projects.module.css'
 import LinkButton from "../layout/LinkButton"
 import ProjectCard from "../project/ProjectCard"
+import Media from 'react-media';
 
 
 function Projects() {
   const [Projects, setProjects] = useState([])
   const [removeLoading, setRemoveLoading] = useState(false)
   const [projectMessage, setProjectsMessage] = useState('')
-  
+
   const location = useLocation()
   let message = ''
   if (location.state) {
@@ -36,7 +37,7 @@ function Projects() {
           setRemoveLoading(true)
         })
         .catch((err) => console.log(err))
-    ), 300)   
+    ), 300)
   }, [])
 
   function removerProject(id) {
@@ -44,43 +45,75 @@ function Projects() {
     fetch(`http://localhost:5000/projects/${id}`, {
       method: 'DELETE',
       headers: {
-         'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-  }).then(resp =>resp.json())
-  .then(data => {
-      setProjects(Projects.filter((project) => project.id !== id))
-      setProjectsMessage('Projeto removido com sucesso!')
-  })
-  .catch(err => console.log(err))
-
-}
+    }).then(resp => resp.json())
+      .then(data => {
+        setProjects(Projects.filter((project) => project.id !== id))
+        setProjectsMessage('Projeto removido com sucesso!')
+      })
+      .catch(err => console.log(err))
+  }
 
   return (
-    <div className={styles.project_container}>
-      <div className={styles.title_container}>
-        <h1>Meus Projetos</h1>
-        <LinkButton to="/newproject" text="Criar Projeto" />
-      </div>
-      {message && <Message type="success" msg={message} />}
-      {projectMessage && <Message type="success" msg={projectMessage} />}
-      <Container customClass="start">
-        {Projects.length > 0 &&
-          Projects.map((project) => (
-          <ProjectCard
-            id={project.id}
-            name={project.name}
-            budget={project.budget}
-            category={project.category.name}
-            key={project.id}
-            handleRemove={removerProject}
-          />
-        ))}
-        {!removeLoading && <Loading />}
-        {removeLoading && Projects.length === 0 && (
-          <p>Não há projetos cadastrados!</p>
-        )}
-      </Container>
-    </div>
+    <Media query="(max-width: 600px)">
+      {matches =>
+        matches ? (
+          <div className={styles.project_container_Mobile}>
+            <div className={styles.title_container_Mobile}>
+              <h1>Meus Projetos</h1>
+              <LinkButton to="/newproject" text="Criar Projeto" />
+            </div>
+            {message && <Message type="success" msg={message} />}
+            {projectMessage && <Message type="success" msg={projectMessage} />}
+            <Container customClass="start">
+              {Projects.length > 0 &&
+                Projects.map((project) => (
+                  <ProjectCard
+                    id={project.id}
+                    name={project.name}
+                    budget={project.budget}
+                    category={project?.category?.name}
+                    key={project.id}
+                    handleRemove={removerProject}
+                  />
+                ))}
+              {!removeLoading && <Loading />}
+              {removeLoading && Projects.length === 0 && (
+                <p>Não há projetos cadastrados!</p>
+              )}
+            </Container>
+          </div>
+        ) : (
+          <div className={styles.project_container}>
+            <div className={styles.title_container}>
+              <h1>Meus Projetos</h1>
+              <LinkButton to="/newproject" text="Criar Projeto" />
+            </div>
+            {message && <Message type="success" msg={message} />}
+            {projectMessage && <Message type="success" msg={projectMessage} />}
+            <Container customClass="start">
+              {Projects.length > 0 &&
+                Projects.map((project) => (
+                  <ProjectCard
+                    id={project.id}
+                    name={project.name}
+                    budget={project.budget}
+                    category={project?.category?.name}
+                    key={project.id}
+                    handleRemove={removerProject}
+                  />
+                ))}
+              {!removeLoading && <Loading />}
+              {removeLoading && Projects.length === 0 && (
+                <p>Não há projetos cadastrados!</p>
+              )}
+            </Container>
+          </div>
+        )
+      }
+
+    </Media>
   )
 }
 export default Projects
